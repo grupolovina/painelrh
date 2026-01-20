@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard RH - Grupo Lovina</title>
+    <link rel="stylesheet" href="dashboard-rh-styles.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>Dashboard RH</h2>
+            <button class="close-sidebar" id="closeSidebar">×</button>
+        </div>
+        <nav class="sidebar-menu">
+            <a href="#home" class="menu-item active" data-page="home">
+                <span>🏠</span> Home
+            </a>
+            <a href="#candidatos" class="menu-item" data-page="candidatos">
+                <span>📋</span> Lista de Candidatos
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <h1 id="pageTitle">Dashboard RH</h1>
+            <button class="theme-toggle" id="themeToggle">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </header>
+
+        <!-- Home Page -->
+        <section class="page active" id="homePage">
+            <div class="welcome-card">
+                <h2>Bem-vindo ao Dashboard de RH</h2>
+                <p>Sistema de gestão de currículos de candidatos do Grupo Lovina</p>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3 id="totalCandidatos">0</h3>
+                        <p>Total de Candidatos</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="candidatosMes">0</h3>
+                        <p>Candidatos este Mês</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Candidatos Page -->
+        <section class="page" id="candidatosPage">
+            <!-- Search and Filters -->
+            <div class="filters-container">
+                <div class="search-box">
+                    <input type="text" id="searchGeral" placeholder="Buscar candidato (nome, cargo, departamento, ano, sexo)...">
+                </div>
+                
+                <div class="filters-grid">
+                    <input type="text" id="filterNome" placeholder="Filtrar por nome">
+                    
+                    <select id="filterCargo">
+                        <option value="">Todos os Cargos</option>
+                    </select>
+                    
+                    <input type="number" id="filterAno" placeholder="Filtrar por ano" min="2020" max="2099">
+                    
+                    <select id="filterSexo">
+                        <option value="">Todos os Sexos</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Feminino">Feminino</option>
+                    </select>
+                    
+                    <button id="clearFilters" class="btn-secondary">Limpar Filtros</button>
+                </div>
+            </div>
+
+            <!-- Table -->
+            <div class="table-container">
+                <table class="candidatos-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nome</th>
+                            <th>Pretensão Salarial</th>
+                            <th>Departamento</th>
+                            <th>Cargo</th>
+                            <th>Currículo</th>
+                            <th>Data de Envio</th>
+                            <th>Sexo</th>
+                            <th>Contato</th>
+                        </tr>
+                    </thead>
+                    <tbody id="candidatosTableBody">
+                        <!-- Candidatos serão inseridos aqui -->
+                    </tbody>
+                </table>
+                
+                <!-- Added mobile card view for responsive design -->
+                <div class="mobile-cards" id="mobileCards">
+                    <!-- Candidatos em formato de card para mobile -->
+                </div>
+                
+                <div id="noResults" class="no-results" style="display: none;">
+                    Nenhum candidato encontrado
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-container" id="loadMoreContainer" style="display: none;">
+                <button id="loadMoreBtn" class="btn-primary">Ver mais</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="dashboard-rh-script.js"></script>
+</body>
+</html>
