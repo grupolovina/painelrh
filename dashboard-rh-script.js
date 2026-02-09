@@ -5,15 +5,26 @@
 // Formato de data: YYYY-MM-DD
 const candidatos = [
   {
-    nome: "João Silva",
-    pretensaoSalarial: "R$ 3.000,00",
-    departamento: "Administrativo",
-    cargo: "Assistente Administrativo",
-    curriculo: "https://drive.google.com/file/d/exemplo1/view",
-    dataEnvio: "2025-01-15",
+    nome: "Rennan Rodrigues",
+    pretensaoSalarial: "R$ 0.000,00",
+    departamento: "Restaurantes",
+    cargo: "Atendente",
+    curriculo: "https://drive.google.com/file/d/1uq7VqPFIwYAEv-d5IcYbvC53pUUTxYMU/view?usp=sharing",
+    dataEnvio: "2026-02-07",
     sexo: "Masculino",
-    whatsapp: "5583999998888",
-    telefone: "5583999998888",
+    whatsapp: "5583981987474",
+    telefone: "5583981987474",
+  },
+  {
+    nome: "Rennan Rodrigues",
+    pretensaoSalarial: "R$ 0.000,00",
+    departamento: "Restaurantes",
+    cargo: "Motorista",
+    curriculo: "https://drive.google.com/file/d/1uq7VqPFIwYAEv-d5IcYbvC53pUUTxYMU/view?usp=sharing",
+    dataEnvio: "2026-02-07",
+    sexo: "Masculino",
+    whatsapp: "5583981987474",
+    telefone: "5583981987474",
   },
 
 ]
